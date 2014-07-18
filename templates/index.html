@@ -1,0 +1,15 @@
+<h2>
+  Lista de Séries
+</h2>
+<a href="/series/add/">
+  Add a new Serie
+</a>
+<hr>
+{% for serie in series %}
+  <p>Nome: {{ serie.get('nome') }} </p>
+  <p>Temporada: {{ serie.get('temporada') }} </p>
+  <p>Canal {{ serie.get('canal') }} </p>
+  <a href="/series/{{ serie.get('_id') }}/edit">alterar</a>
+  <a href="/series/{{ serie.get('_id') }}/delete">remover</a>
+  <hr>
+{% endfor %}

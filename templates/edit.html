@@ -1,0 +1,16 @@
+<h2 class="ui header">
+  Alterar Serie
+</h2>
+<hr>
+<form action="/series/{{ serie.get('_id') }}/edit/" method="POST">
+  <label>Nome</label>
+  <input type="text" name="nome" required="required" value="{{ serie.get('nome') }}">
+  <br>
+  <label>Temporada</label>
+  <input type="text" name="temporada" required="required" value="{{ serie.get('temporada') }}">
+  <br>
+  <label>Canal</label>
+  <input type="text" name="canal" required="required" value="{{ serie.get('canal') }}">
+  <br>
+  <button type="submit">Salvar</button><a href="/">voltar</a>
+</form>
